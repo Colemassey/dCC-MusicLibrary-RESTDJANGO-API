@@ -22,7 +22,6 @@ class SongList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class SongDetail(APIView):
-
     def get_song(self, pk):
         try:
             return Song.objects.get(pk=pk)
